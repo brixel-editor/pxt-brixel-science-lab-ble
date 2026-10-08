@@ -1,0 +1,14 @@
+{
+  "scienceBluetooth|block": "바우어버드 블루투스",
+  "{id:category}ScienceBluetooth": "바우어버드 블루투스",
+  "{id:group}Connect": "연결",
+  "{id:group}Send": "보내기",
+  "scienceBluetooth.startBluetooth|block": "블루투스 연결 시작",
+  "scienceBluetooth.startBluetooth": "시작할 때 한 번 실행해요. 바우어버드에서 micro:bit 블루투스를 선택하고 연결해요.",
+  "scienceBluetooth.bluetoothConnected|block": "블루투스 연결됨",
+  "scienceBluetooth.bluetoothConnected": "바우어버드와 블루투스로 연결되면 참이에요.",
+  "scienceBluetooth.sendBluetooth|block": "측정값 $values 바우어버드로 블루투스 보내기",
+  "scienceBluetooth.sendBluetooth": "여러 센서의 측정값을 배열에 순서대로 넣어요. 블루투스 연결 후 한 줄로 함께 보내요. 연결 전에는 전송하지 않아요.",
+  "scienceBluetooth.sendValueBluetooth|block": "측정값 $value 바우어버드로 블루투스 보내기",
+  "scienceBluetooth.sendValueBluetooth": "시작할 때 블루투스 연결 시작을 실행하고 바우어버드와 연결해요. 센서 측정값 하나를 끼워 넣어요. 연결 전에는 전송하지 않아요."
+}

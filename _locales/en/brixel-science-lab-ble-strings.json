@@ -1,0 +1,14 @@
+{
+  "scienceBluetooth|block": "Bowerbird Bluetooth",
+  "{id:category}ScienceBluetooth": "Bowerbird Bluetooth",
+  "{id:group}Connect": "Connect",
+  "{id:group}Send": "Send",
+  "scienceBluetooth.startBluetooth|block": "start Bluetooth connection",
+  "scienceBluetooth.startBluetooth": "Run once at program start. In Bowerbird choose micro:bit Bluetooth and connect.",
+  "scienceBluetooth.bluetoothConnected|block": "Bluetooth connected",
+  "scienceBluetooth.bluetoothConnected": "True once Bowerbird has connected to the board.",
+  "scienceBluetooth.sendBluetooth|block": "send values $values to Bowerbird by Bluetooth",
+  "scienceBluetooth.sendBluetooth": "Put several sensor readings in the array in order; they are sent together as one comma-separated line. Nothing is sent before connection. No headers or units are sent.",
+  "scienceBluetooth.sendValueBluetooth|block": "send measurement $value to Bowerbird by Bluetooth",
+  "scienceBluetooth.sendValueBluetooth": "Put a single sensor reading in this block. Nothing is sent before connection."
+}
