@@ -1,8 +1,13 @@
-# BRIXEL Science Lab Bluetooth — 0.1.0 개발판
+# BRIXEL Science Lab Bluetooth — 0.2.0 개발판 (블루투스판)
 
-[BRIXEL Science Lab](https://github.com/brixel-editor/pxt-brixel-science-lab)의 **블루투스 짝 확장**입니다. 측정값을 **바우어버드 프로**에 블루투스(BLE, 노르딕 UART)로 보냅니다. **micro:bit V2** 전용입니다.
+[BRIXEL Science Lab](https://github.com/brixel-editor/pxt-brixel-science-lab)의 **블루투스판**입니다. 이 확장 **하나만** 넣으면 사이언스랩의 모든 블록(센서·표시·USB 보내기)이 **자동으로 함께** 들어오고, 측정값을 **바우어버드 프로**에 블루투스(BLE, 노르딕 UART)로 보내는 블록이 더해집니다. **micro:bit V2** 전용입니다.
 
-과학실험은 기본적으로 **USB 유선**으로 보냅니다(본 확장의 `바우어버드로 USB 보내기` 블록). **무선 실험을 할 때만** 이 짝 확장을 추가합니다.
+| 수업 | 넣을 확장 |
+|---|---|
+| 유선(USB) | 본 확장 `pxt-brixel-science-lab` **하나** |
+| 무선(블루투스) | 블루투스 확장 `pxt-brixel-science-lab-ble` **하나**(본 확장 자동 포함) |
+
+이 확장 0.2.0 은 본 확장 **v0.7.3** 을 품습니다. 본 확장을 따로 또 넣을 필요는 없습니다(넣더라도 같은 버전이면 괜찮지만, 다른 버전이 섞이면 MakeCode 가 충돌을 알립니다).
 
 ## 왜 따로 나눴나요?
 
@@ -10,8 +15,7 @@
 
 ## MakeCode에 추가하기
 
-1. 먼저 본 확장 `https://github.com/brixel-editor/pxt-brixel-science-lab` 를 추가합니다(센서·표시 블록).
-2. **확장** 검색창에 다음 주소를 붙여 넣어 이 짝 확장을 추가합니다.
+**확장** 검색창에 다음 주소를 붙여 넣습니다. 본 확장은 자동으로 함께 들어옵니다.
 
 ```text
 https://github.com/brixel-editor/pxt-brixel-science-lab-ble
@@ -43,7 +47,8 @@ basic.forever(function () {
 ## 주의
 
 - 블루투스가 켜진 동안에는 기본 **음악 블록**(소리 재생)과 함께 쓰면 마이크로비트가 오류(070)로 멈출 수 있습니다.
-- 이전에 본 확장(v0.6.x)의 블루투스 블록으로 만든 작품은 이 짝 확장을 추가하면 같은 블록이 다시 연결됩니다.
+- 이전에 본 확장(v0.6.x)의 블루투스 블록으로 만든 작품은 이 블루투스 확장을 추가하면 같은 블록이 다시 연결됩니다(blockId·JavaScript 이름 `scienceBluetooth.*` 그대로).
+- 0.2.0 부터 보내는 줄의 형식(숫자만·쉼표·NaN/Infinity 줄 버림)은 본 확장의 `scienceData.encode` 를 그대로 씁니다(전에는 같은 규칙의 사본).
 
 ## 라이선스
 

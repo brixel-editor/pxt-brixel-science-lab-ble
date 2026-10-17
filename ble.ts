@@ -1,5 +1,6 @@
 // BRIXEL Science Lab Bluetooth companion: send measurements to Bowerbird Pro over BLE (Nordic UART).
 // Kept out of brixel-science-lab so wired-only (USB) classes never start the BLE stack.
+// v0.2.0: this extension depends on brixel-science-lab (pinned tag), so adding only this one brings every Science Lab block.
 // Block ids match the ones that used to live in brixel-science-lab, so saved projects reconnect.
 //% color=#247BA0 weight=89 icon="\uf294" block="Bowerbird Bluetooth"
 //% groups='["Connect","Send"]'
@@ -30,22 +31,8 @@ namespace scienceBluetooth {
     //% blockId=science_send_one_ble block="send measurement $value to Bowerbird by Bluetooth" group="Send" weight=70
     export function sendValueBluetooth(value: number): void { trySend([value]) }
 
-    // Same line format as the USB blocks: numbers only, comma-separated, newline-terminated.
-    // Bowerbird drops a whole line if any field is not a number, so NaN/Infinity rows are skipped.
-    function encode(values: number[]): string {
-        if (!values || values.length == 0) return ""
-        let line = ""
-        for (let i = 0; i < values.length; i++) {
-            let v = values[i]
-            if (v != v || v - v != 0) return ""
-            if (i > 0) line += ","
-            line += "" + v
-        }
-        return line
-    }
-
     export function trySend(values: number[]): boolean {
-        let line = encode(values)
+        let line = scienceData.encode(values)  // same rule as the USB blocks (main extension)
         if (line.length == 0 || !connected || sending) return false
         sending = true
         bluetooth.uartWriteString(line + "\n")
