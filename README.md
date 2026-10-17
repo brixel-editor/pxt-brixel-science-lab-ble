@@ -1,4 +1,4 @@
-# BRIXEL Science Lab Bluetooth — 0.3.1 개발판 (블루투스판)
+# BRIXEL Science Lab Bluetooth — 0.3.2 개발판 (블루투스판)
 
 [BRIXEL Science Lab](https://github.com/brixel-editor/pxt-brixel-science-lab)의 **블루투스판**입니다. 이 확장 **하나만** 넣으면 사이언스랩의 모든 블록(센서·표시·USB 보내기)이 **자동으로 함께** 들어오고, 측정값을 **바우어버드 프로**에 블루투스(BLE, 노르딕 UART)로 보내는 블록이 더해집니다. **micro:bit V2** 전용입니다.
 
@@ -7,7 +7,7 @@
 | 유선(USB) | 본 확장 `pxt-brixel-science-lab` **하나** |
 | 무선(블루투스) | 블루투스 확장 `pxt-brixel-science-lab-ble` **하나**(본 확장 자동 포함) |
 
-이 확장 0.3.1 은 본 확장 **v0.8.1** 을 품습니다(0.3.0 = v0.8.0). 본 확장을 따로 또 넣을 필요는 없습니다(넣더라도 같은 버전이면 괜찮지만, 다른 버전이 섞이면 MakeCode 가 충돌을 알립니다).
+이 확장 0.3.2 는 본 확장 **v0.8.2** 를 품습니다. 본 확장을 따로 또 넣을 필요는 없습니다(넣더라도 같은 버전이면 괜찮지만, 다른 버전이 섞이면 MakeCode 가 충돌을 알립니다).
 
 ## 왜 따로 나눴나요?
 
