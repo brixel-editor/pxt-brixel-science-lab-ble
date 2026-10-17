@@ -1,12 +1,12 @@
 {
   "name": "brixel-science-lab-ble",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Bluetooth (BLE) edition of BRIXEL Science Lab: includes every Science Lab block plus wireless sending to Bowerbird Pro",
   "license": "MIT",
   "dependencies": {
     "core": "*",
     "bluetooth": "*",
-    "brixel-science-lab": "github:brixel-editor/pxt-brixel-science-lab#v0.8.3"
+    "brixel-science-lab": "github:brixel-editor/pxt-brixel-science-lab#v0.8.4"
   },
   "files": [
     "ble.ts",
