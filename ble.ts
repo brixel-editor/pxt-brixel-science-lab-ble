@@ -17,6 +17,17 @@ namespace scienceBluetooth {
         bluetooth.onBluetoothConnected(function () { connected = true })
         bluetooth.onBluetoothDisconnected(function () { connected = false })
         bluetooth.startUartService()
+        // Intelligent Science Lab ON blocks (main extension) talk to DSL On 2 over BLE once Bluetooth is started.
+        scienceOn.sendHook = function (line: string): boolean {
+            if (!connected || sending) return false
+            sending = true
+            bluetooth.uartWriteString(line)
+            sending = false
+            return true
+        }
+        bluetooth.onUartDataReceived(serial.delimiters(Delimiters.NewLine), function () {
+            scienceOn.handleReply(bluetooth.uartReadUntil(serial.delimiters(Delimiters.NewLine)))
+        })
     }
 
     /** True once Bowerbird has connected to the board. */
